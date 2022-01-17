@@ -4,12 +4,12 @@
   become: no
   vars:
     pool_dir: "/var/lib/libvirt/images"
-    vm: f34-lab01
+    vm: f34-lab02
     vcpus: 2
     ram_mb: 2048
     cleanup: no
     net: default
-    # ssh_pub_key: "/home/ansible/.ssh/id_rsa.pub"
+    ssh_pub_key: "/home/ansible/.ssh/id_rsa.pub"
   tasks:
     - name: KVM Provision role
       include_role:
@@ -21,4 +21,4 @@
         vm_ram_mb: "{{ ram_mb }}"
         vm_net: "{{ net }}"
         cleanup_tmp: "{{ cleanup }}"
-        # ssh_key: "{{ ssh_pub_key }}"
+        ssh_key: "{{ ssh_pub_key }}"
