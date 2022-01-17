@@ -9,7 +9,7 @@
     ram_mb: 2048
     cleanup: no
     net: default
-    ssh_pub_key: "/home/ansible/.ssh/id_rsa.pub"
+    ssh_pub_key: "/home/osisoft/.ssh/id_rsa.pub"
   tasks:
     - name: KVM Provision role
       include_role:
